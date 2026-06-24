@@ -6,8 +6,11 @@ import sys
 import json
 import logging
 from datetime import datetime
+from pathlib import Path
 
-sys.path.insert(0, r"E:\git\zx-work-rag\tests")
+ROOT = Path(__file__).parent.parent
+TESTS_DIR = Path(__file__).parent
+sys.path.insert(0, str(TESTS_DIR))
 
 from round3_test1_chat import run_round3_test1
 from round3_test2_embedding import run_round3_test2
@@ -18,7 +21,7 @@ logging.basicConfig(
     format="%(asctime)s [%(levelname)s] %(message)s",
     handlers=[
         logging.FileHandler(
-            r"E:\git\zx-work-rag\tests\round3_master.log", encoding="utf-8"
+            str(TESTS_DIR / "round3_master.log"), encoding="utf-8"
         ),
         logging.StreamHandler(),
     ],
@@ -86,7 +89,7 @@ def main():
 
     # Save consolidated results
     with open(
-        r"E:\git\zx-work-rag\tests\round3_results.json", "w", encoding="utf-8"
+        str(TESTS_DIR / "round3_results.json"), "w", encoding="utf-8"
     ) as f:
         json.dump(all_results, f, ensure_ascii=False, indent=2)
 

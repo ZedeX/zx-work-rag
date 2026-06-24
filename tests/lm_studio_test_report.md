@@ -3,7 +3,7 @@
 **测试日期：** 2026-06-23  
 **测试环境：** Windows 10 x64, LM Studio 本地服务  
 **API地址：** http://127.0.0.1:1234/v1  
-**Python环境：** E:\git\zx-work-rag\.venv (openai 2.43.0, numpy 2.5.0)
+**Python环境：** .venv (openai 2.43.0, numpy 2.5.0)
 
 ---
 

@@ -7,7 +7,10 @@ import time
 import json
 import logging
 import numpy as np
+from pathlib import Path
 from openai import OpenAI
+
+TESTS_DIR = Path(__file__).parent
 
 BASE_URL = "http://127.0.0.1:1234/v1"
 API_KEY = "lm-studio"
@@ -51,7 +54,7 @@ logging.basicConfig(
     format="%(asctime)s [%(levelname)s] %(message)s",
     handlers=[
         logging.FileHandler(
-            r"E:\git\zx-work-rag\tests\round3_test3_rag.log", encoding="utf-8"
+            str(TESTS_DIR / "round3_test3_rag.log"), encoding="utf-8"
         ),
         logging.StreamHandler(),
     ],
@@ -288,7 +291,7 @@ def run_round3_test3() -> dict:
 
     # Save raw results
     with open(
-        r"E:\git\zx-work-rag\tests\round3_test3_rag_results.json", "w", encoding="utf-8"
+        str(TESTS_DIR / "round3_test3_rag_results.json"), "w", encoding="utf-8"
     ) as f:
         json.dump(results, f, ensure_ascii=False, indent=2)
 

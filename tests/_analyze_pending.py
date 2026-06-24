@@ -3,7 +3,8 @@ import sqlite3
 import json
 from pathlib import Path
 
-DB_PATH = r"E:\git\zx-work-rag\data\file_manifest.db"
+ROOT = Path(__file__).parent.parent
+DB_PATH = ROOT / "data" / "file_manifest.db"
 conn = sqlite3.connect(DB_PATH)
 c = conn.cursor()
 

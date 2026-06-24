@@ -1,5 +1,9 @@
 import sqlite3
-conn = sqlite3.connect(r"E:\git\zx-work-rag\data\file_manifest.db")
+from pathlib import Path
+
+ROOT = Path(__file__).parent.parent
+DB_PATH = ROOT / "data" / "file_manifest.db"
+conn = sqlite3.connect(str(DB_PATH))
 c = conn.cursor()
 
 c.execute("SELECT status, COUNT(*) FROM files WHERE is_duplicate=0 GROUP BY status ORDER BY COUNT(*) DESC")
