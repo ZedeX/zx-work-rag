@@ -1,0 +1,98 @@
+# ===========================
+# Environment & Secrets
+# ===========================
+.env
+.env.*
+!.env.example
+
+# ===========================
+# Python
+# ===========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+*.eggs/
+dist/
+build/
+eggs/
+*.whl
+pip-wheel-metadata/
+.eggs/
+
+# ===========================
+# Virtual Environment
+# ===========================
+.venv/
+venv/
+ENV/
+env/
+
+# ===========================
+# Runtime Data (large, generated)
+# ===========================
+data/
+!data/.gitkeep
+
+# ===========================
+# IDE & Editor
+# ===========================
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# ===========================
+# OS Generated Files
+# ===========================
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# ===========================
+# Logs
+# ===========================
+*.log
+logs/
+
+# ===========================
+# Database (runtime)
+# ===========================
+*.db
+*.sqlite3
+*.sqlite
+
+# ===========================
+# Binary & Archive files
+# ===========================
+*.pickle
+*.parquet
+*.bin
+*.tmp
+
+# ===========================
+# Test Artifacts
+# ===========================
+tests/*_results.json
+tests/*.log
+
+# ===========================
+# Project Memory (local only)
+# ===========================
+project_memory.md
+
+# ===========================
+# Trae IDE
+# ===========================
+.trae/
